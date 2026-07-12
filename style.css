@@ -273,10 +273,9 @@
     }
 
     @media screen and (max-width:370px) {
-        nav {
-            flex-direction: column;
+        nav svg {
+            width: 95px;
         }
-
         .login input {
             width: 200px;
         }
@@ -284,6 +283,11 @@
         .header_mid_content h1 {
             font-size: 26px;
             line-height: 40px;
+        }
+    }
+    @media screen and (max-width:332px) {
+        nav {
+            flex-direction: column;
         }
     }
 
@@ -327,9 +331,17 @@
         .curve {
             border-top-left-radius: 65% 80%;
             border-top-right-radius: 65% 80%;
+            height: 62px;
         }
     }
 
+    @media screen and (max-width:500px) {
+        .curve {
+            border-top-left-radius: 65% 60%;
+            border-top-right-radius: 65% 60%;
+            margin-bottom: -24px;
+        }
+    }
     /* ============== Main Style =================== */
     main {
         max-width: 80vw;
