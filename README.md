@@ -1,11 +1,6 @@
    # 🎬 Netflix Landing Page Clone
 > A responsive front-end clone built for learning and practicing modern HTML and CSS.
 
-## 🌐 Live Demo
-
-👉 **[View Live Website](https://anantasangwan.github.io/netflix-ui-clone/)**
-
-
 A responsive clone of the Netflix India landing page built using **HTML5** and **CSS3**. This project was created to strengthen my front-end development skills by recreating the look and feel of the official landing page while focusing on responsive design, modern CSS techniques, and clean code organization.
 
 ## 🚀 Features
@@ -98,6 +93,12 @@ No additional setup is required.
 ## ⚠️ Disclaimer
 
 This project was created for educational purposes only. It is inspired by the Netflix landing page and is not affiliated with, endorsed by, or associated with Netflix.
+
+--- 
+
+## 📝 Note
+
+This project was initially inspired by the Netflix landing page as a learning exercise. The branding was later changed to **MovieFlix** to create an original portfolio project and to avoid potential browser security or phishing warnings that can occur with close visual imitations of well-known websites.
 
 ---
 
