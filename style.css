@@ -231,6 +231,10 @@
             width: 120px;
         }
 
+        .header_mid_content {
+            margin: 90px auto 150px auto;
+        }
+
         .header_mid_content h1 {
             font-size: 35px;
             line-height: 50px;
@@ -247,6 +251,25 @@
             font-size: 14px;
             line-height: 18px;
         }
+
+        .header_mid_content {
+            margin: 50px auto 100px auto;
+        }
+
+        .header_mid_content h1 {
+            font-size: 30px;
+            line-height: 45px;
+        }
+
+        .header_mid_content p {
+            font-size: 14px;
+        }
+
+        .login h3 {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 500;
+        }
     }
 
     @media screen and (max-width:370px) {
@@ -256,6 +279,11 @@
 
         .login input {
             width: 200px;
+        }
+
+        .header_mid_content h1 {
+            font-size: 26px;
+            line-height: 40px;
         }
     }
 
@@ -535,9 +563,11 @@
         .trending ul li {
             height: 254px;
         }
+
         .trending ul li img {
             height: 240px;
         }
+
         .trending ul li span {
             font-size: 70px;
         }
@@ -551,9 +581,11 @@
         .trending ul li {
             height: 214px;
         }
+
         .trending ul li img {
             height: 200px;
         }
+
         .trending ul li span {
             font-size: 65px;
         }
@@ -575,9 +607,11 @@
         .trending ul li {
             height: 194px;
         }
+
         .trending ul li img {
             height: 180px;
         }
+
         .trending ul li span {
             font-size: 60px;
         }
