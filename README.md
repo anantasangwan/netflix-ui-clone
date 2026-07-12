@@ -11,7 +11,7 @@ A responsive clone of the Netflix India landing page built using **HTML5** and *
 * Trending movies section
 * "More Reasons to Join" cards
 * Frequently Asked Questions section
-* Footer similar to the original website
+* Footer similar to the original netflix website
 * Smooth hover effects and transitions
 * SVG icons and custom assets
 
