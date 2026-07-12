@@ -1,0 +1,584 @@
+    /* ----- Font Import ------ */
+    @import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+    /* ---------- Global variables ---------- */
+    :root {
+        --netflixRed: #E50914;
+        --text_color: rgb(255, 255, 255);
+    }
+
+    body {
+        font-family: "Martel Sans", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        color: var(--text_color);
+    }
+
+    /* ============== Header Style ================== */
+    header {
+        padding: 15px 40px;
+        background-image: url(assets/backgroundImage.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: auto;
+        position: relative;
+        margin-bottom: -10px;
+    }
+
+    /*--- this produces a dark overlay through which the background image is still visible. ---*/
+    header::before {
+        /* creates an imaginary element as the first child of header */
+        content: "";
+        /* This is required for ::before and ::after , but we didn't put any text inside it */
+        position: absolute;
+        /* To position inside the header, not relative to the entire page */
+        inset: 0;
+        /* top:0; left:0; right:0; bottom:0; -> The pseudo-element now covers 100% of the header */
+        background: rgba(0, 0, 0, 0.75);
+        /* This gives the pseudo-element a black color with transparency */
+    }
+
+    /* ===  Navbar Style ==== */
+    nav {
+        position: relative;
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+        max-width: 80vw;
+        margin: 10px auto;
+    }
+
+    .nav_right {
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav svg {
+        margin-right: auto;
+        width: 148px;
+        height: 40px;
+    }
+
+    .language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid grey;
+        border-radius: 5px;
+        background: rgba(22, 22, 22, 0.7);
+        color: #fff;
+        padding: 5.5px 9px;
+        max-width: fit-content;
+        transition: all 1s;
+    }
+
+    .language select {
+        border: none;
+        appearance: none;
+        /*Hide the browser's default dropdown arrow*/
+        background: rgba(22, 22, 22, 0.7);
+        color: var(--text_color);
+        font-size: 17px;
+        cursor: pointer;
+    }
+
+    .language option {
+        border: none;
+        background-color: white;
+        color: #000;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--text_color);
+        background-color: var(--netflixRed);
+        padding: 4px 12px;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: all 1s;
+    }
+
+    .language:hover {
+        outline: 2px solid white;
+        outline-offset: 2px;
+        /*outline is placed 2px away from the border*/
+        cursor: pointer;
+    }
+
+    nav a:hover {
+        background-color: #d50913;
+    }
+
+    /* ==== Header's Mid Space Content Style ===== */
+    .header_mid_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 20px;
+        margin: 130px auto 195px auto;
+        max-width: 600px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header_mid_content h1 {
+        font-size: 50px;
+        line-height: 70px;
+        font-weight: bolder;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .header_mid_content p {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+
+    /* ==== Login Style ===== */
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login h3 {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 520;
+        text-align: center;
+    }
+
+    .inputEmail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 0px auto 0px auto;
+    }
+
+    .login input {
+        border: 1px solid grey;
+        border-radius: 5px;
+        background: rgba(22, 22, 22, 0.7);
+        color: #fff;
+        width: 342px;
+        padding: 17px;
+        margin: 0px auto 0px auto;
+        font-size: 16px;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .login button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text_color);
+        background-color: var(--netflixRed);
+        border: none;
+        padding: 12px 17px;
+        text-align: center;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    @media screen and (max-width:1200px) {
+        .header_mid_content h1 {
+            font-size: 40px;
+            line-height: 60px;
+        }
+
+        .header_mid_content p {
+            font-size: 17px;
+        }
+
+        .login button {
+            font-size: 18px;
+        }
+    }
+
+    @media screen and (max-width:720px) {
+        .inputEmail {
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .login input {
+            width: 300px;
+            margin: 0px auto;
+        }
+
+        .login button {
+            font-size: 21px;
+        }
+
+        nav svg {
+            width: 120px;
+        }
+
+        .header_mid_content h1 {
+            font-size: 35px;
+            line-height: 50px;
+        }
+
+    }
+
+    @media screen and (max-width:500px) {
+        nav select {
+            display: none;
+        }
+
+        .login h3 {
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+
+    @media screen and (max-width:370px) {
+        nav {
+            flex-direction: column;
+        }
+
+        .login input {
+            width: 200px;
+        }
+    }
+
+    /* ------------ Curve Design Style(Pure CSS Thing)  -------------- */
+    .curve::before {
+        /*adds blue glow at bottom of curve that fades away*/
+        content: "";
+        position: absolute;
+        inset: 0;
+        /* now covers 100% of the curve */
+        background: radial-gradient(ellipse at top,
+                rgba(10, 33, 124, 0.35) 25%,
+                rgba(3, 14, 55, 0.18) 55%,
+                rgba(1, 13, 54, 0.10) 65%,
+                transparent 85%);
+    }
+
+    .curve {
+        height: 80px;
+        position: relative;
+        z-index: 2;
+
+        /*======= Technique to give Border via Background ========*/
+        border: 5px solid transparent;
+        background:
+            linear-gradient(#000, #000) padding-box,
+            /* content + padding background*/
+            linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%) border-box;
+        /*border background -> bcz content + padding background is assigned above*/
+
+        border-top-left-radius: 65% 100%;
+        border-top-right-radius: 65% 100%;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        margin-top: -64px;
+        margin-bottom: -16px;
+    }
+
+    @media screen and (max-width:720px) {
+        .curve {
+            border-top-left-radius: 65% 80%;
+            border-top-right-radius: 65% 80%;
+        }
+    }
+
+    /* ============== Main Style =================== */
+    main {
+        max-width: 80vw;
+        padding: 0 20px;
+        margin: -15px auto 0px auto;
+    }
+
+    /* -------- Trending section Style ------- */
+    .trending h2 {
+        margin-bottom: 4px;
+    }
+
+    .trending ul {
+        list-style: none;
+        display: flex;
+        gap: 35px;
+        overflow-y: visible;
+        overflow-x: scroll;
+        scrollbar-width: none;
+        /*no default scrollbar*/
+    }
+
+    .trending ul li {
+        position: relative;
+        padding: 7px;
+        height: 274px;
+    }
+
+    .trending ul li img {
+        height: 260px;
+        border-radius: 10px;
+        cursor: pointer;
+        opacity: 0.9;
+        transition: all 0.2s ease-in-images/out;
+    }
+
+    .trending ul li img:hover {
+        transform: scale(1.05);
+        z-index: 5;
+    }
+
+    .trending ul li span {
+        position: absolute;
+        bottom: 5px;
+        left: -18px;
+        font-family: "Anton", sans-serif;
+        /* height: 70px; */
+        font-size: 100px;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgb(255, 255, 255);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    /* ------- More Reasons Section Style -------- */
+    .reasons {
+        position: relative;
+        width: 100%;
+        margin: 55px auto;
+    }
+
+    .reasons h2 {
+        margin-bottom: 4px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        /* ------- Flexbox stretches every item to the Height of the Tallest One. -------- */
+        gap: 16px;
+        width: 100%;
+    }
+
+    .card {
+        flex: 1;
+        /* ------- Tells All Cards to Share the Available Width Equally ------ */
+        position: relative;
+        padding: 10px 20px 100px 20px;
+        /* 100px in Bottom to Reserve space for the icon */
+        border-radius: 16px;
+        background: linear-gradient(149deg, #192247 0%, #210e17 96.86%);
+    }
+
+    .card h3 {
+        font-size: 22px;
+        line-height: 32px;
+        margin-top: 17px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 20px;
+        font-size: 15px;
+        margin: 0px;
+    }
+
+    .card svg {
+        /* place it in bottom right corner*/
+        position: absolute;
+        bottom: 13px;
+        right: 10px;
+    }
+
+    @media screen and (max-width: 960px) {
+        .container {
+            flex-direction: column;
+        }
+    }
+
+    /* -------- Questions Style ---------- */
+    .questions {
+        position: relative;
+        width: 100%;
+    }
+
+    .questions h2 {
+        margin-bottom: 4px;
+    }
+
+    .questions ul {
+        list-style: none;
+        padding: 0px;
+        margin: 0px auto 40px auto;
+    }
+
+    .questions ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 7px;
+        background-color: rgb(45, 45, 45);
+        padding: 0px 20px;
+        margin: 0px auto 8px auto;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .questions ul li:hover {
+        background-color: rgb(75, 75, 75);
+    }
+
+    .questions ul li h3 {
+        margin-right: auto;
+        font-size: 22px;
+        font-weight: 520;
+    }
+
+    .questions ul li svg {
+        height: 36px;
+        width: 36px;
+    }
+
+    @media screen and (max-width: 960px) {
+        .questions ul li h3 {
+            font-size: 18px;
+        }
+
+        .questions ul li svg {
+            height: 24px;
+            width: 36px;
+        }
+    }
+
+    @media screen and (max-width: 560px) {
+
+        .trending h2,
+        .questions h2,
+        .reasons h2 {
+            font-size: 22px;
+        }
+    }
+
+    /* ==================== Footer Style ======================== */
+    .footerLogin {
+        margin: 5px auto;
+        padding: 10px;
+    }
+
+    footer {
+        max-width: 80vw;
+        padding: 10px 20px;
+        margin: 60px auto;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    footer .firstPara {
+        font-size: 16px;
+        font-weight: 400;
+        padding-bottom: 17px;
+    }
+
+    footer .firstPara a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    footer ul {
+        list-style: none;
+        padding: 0px;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 5px;
+    }
+
+    footer ul li a {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    footer .secLastPara {
+        font-size: 14px;
+        font-weight: 400;
+        padding-top: 15px;
+    }
+
+    footer .lastPara {
+        font-size: 13px;
+        font-weight: 400;
+        padding-top: 18px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        footer ul {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .trending ul li {
+            height: 254px;
+        }
+        .trending ul li img {
+            height: 240px;
+        }
+        .trending ul li span {
+            font-size: 70px;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        footer ul {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .trending ul li {
+            height: 214px;
+        }
+        .trending ul li img {
+            height: 200px;
+        }
+        .trending ul li span {
+            font-size: 65px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        footer ul {
+            grid-template-columns: 1fr;
+        }
+
+        .card h3 {
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 16px;
+        }
+
+        .trending ul li {
+            height: 194px;
+        }
+        .trending ul li img {
+            height: 180px;
+        }
+        .trending ul li span {
+            font-size: 60px;
+        }
+    }
