@@ -98,7 +98,7 @@ This project was created for educational purposes only. It is inspired by the Ne
 
 ## 📝 Note
 
-This project was initially inspired by the Netflix landing page as a learning exercise. The branding was later changed to **MovieFlix** to create an original portfolio project and to avoid potential browser security or phishing warnings that can occur with close visual imitations of well-known websites.
+This project was initially inspired by the Netflix landing page as a learning exercise. The branding was later changed to **MovieFlix** to create an original portfolio project with close visual imitations of well-known websites.
 
 ---
 
